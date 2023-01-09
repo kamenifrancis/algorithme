@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR 
+set1 = tab
+set2 : tab 
+i,j = INTEGER
+test =BOOLEAN:=false 
+somme :=0
+BEGIN 
+FOR i FROM 0 TO set1.length STEP step  DO 
+     FOR j FROM 0 TO set2.length STEP step  DO
+     IF (set1[i] = set2[j])  THEN
+        test= true;
+        break 
+      END_IF
+        
+    END_FOR
+    IF (test=false) THEN
+        somme1= somme + set1[i]
+
+
+    END_IF
+    FOR i FROM 0 TO set2.length STEP step  DO 
+     FOR j FROM 0 TO set2.length STEP step  DO
+     IF (set2[i] = set1[j])  THEN
+        test= true;
+        break 
+      END_IF
+        
+    END_FOR
+    IF (test=false) THEN
+        somme2 = somme + set2[i]
+        END_IF
+        END_FOR
+
+writeln somme =somme1 + somme2
+END
